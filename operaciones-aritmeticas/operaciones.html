@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Operaciones Aritméticas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="operaciones.css">
+</head>
+<body>
+    <a href="../index.html" class="boton boton-regreso">← Volver al inicio</a>
+    
+    <div class="operaciones-container">
+        <div class="operaciones-selector">
+            <button class="boton-operacion" data-operacion="+">Suma (+)</button>
+            <button class="boton-operacion" data-operacion="-">Resta (-)</button>
+            <button class="boton-operacion" data-operacion="*">Multiplicación (×)</button>
+            <button class="boton-operacion" data-operacion="/">División (÷)</button>
+        </div>
+
+        <div class="configuracion">
+            <div class="rango-container">
+                <div class="input-group">
+                    <label>Mínimo</label>
+                    <input type="number" id="min" value="1" placeholder="Mínimo">
+                </div>
+                <div class="input-group">
+                    <label>Máximo</label>
+                    <input type="number" id="max" value="20" placeholder="Máximo">
+                </div>
+                <div class="input-group">
+                    <label>Cantidad de operaciones</label>
+                    <input type="number" id="cantidad" min="1" value="1">
+                </div>
+            </div>
+            <div class="botones-accion">
+                <button class="boton-accion" onclick="generarOperacion()">Generar Operaciones</button>
+                <button class="boton-accion" onclick="mostrarResultado()">Resultado</button>
+            </div>
+        </div>
+
+        <div class="expresion-container" id="expresion"></div>
+        <div id="resultado"></div>
+        <div class="error" id="error"></div>
+    </div>
+
+    <script src="operaciones.js"></script>
+    
+</body>
+</html>

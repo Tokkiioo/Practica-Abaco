@@ -1,0 +1,175 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color:  #042773;
+}
+
+.operaciones-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    max-width: 800px;
+    color: white;
+}
+
+.operaciones-selector {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.boton-operacion {
+    padding: 15px 25px;
+    font-size: 1.1em;
+    border: 2px solid #4CAF50;
+    background-color: white;
+    color: #4CAF50;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.boton-operacion:hover {
+    background-color: #baf4ce;
+}
+
+.boton-operacion.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.configuracion {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#cantidad {
+    padding: 10px;
+    width: 100px;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.expresion-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    min-height: 80px;
+    font-size: 24px;
+    padding: 20px;
+    border: 2px dashed #4CAF50;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.botones-accion {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.boton-accion {
+    padding: 15px 30px;
+    font-size: 1.1em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.boton-accion:hover {
+    background-color: #45a049;
+}
+
+#resultado {
+    font-size: 36px;
+    color: #e8eee8;
+    margin: 20px 0;
+    min-height: 50px;
+}
+
+.error {
+    color: #ff4444;
+    margin: 10px 0;
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .expresion-container {
+        font-size: 20px;
+        padding: 15px;
+    }
+    
+    .boton-operacion {
+        padding: 12px 20px;
+        font-size: 1em;
+    }
+    
+    #resultado {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .configuracion {
+        flex-direction: column;
+    }
+    
+    .expresion-container {
+        font-size: 18px;
+    }
+}
+
+.rango-container {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.input-group label {
+    font-size: 0.9em;
+    color: #e7e1e1;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.input-group input {
+    width: 120px;
+    padding: 8px;
+    font-size: 14px;
+}
+
+@media (max-width: 480px) {
+    .input-group input {
+        width: 100%;
+    }
+}
+
+.boton-regreso {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+}
+
+.boton-regreso:hover {
+    background-color: #45a049;
+}

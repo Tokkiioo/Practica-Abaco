@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Temporizador de Números</title>
+    <link rel="stylesheet" href="temporizador.css">
+    <link rel="stylesheet" href="abaco.css">
+</head>
+<body>
+    <a href="../index.html" class="boton boton-regreso">← Volver al inicio</a>
+    
+    <div class="container">
+        <div class="inputs">
+            <input type="number" id="minimo" placeholder="Número mínimo">
+            <input type="number" id="maximo" placeholder="Número máximo">
+        </div>
+        
+        <div class="center">
+            <div class="configuracion">
+                <div class="inputs-temporizador">
+                    <div class="input-group">
+                        <label>Número de iteraciones</label>
+                        <input type="number" id="iteraciones" placeholder="Ej: 10" min="1">
+                    </div>
+                    <div class="input-group">
+                        <label>Intervalo (milisegundos)</label>
+                        <input type="number" id="intervalo" placeholder="Ej: 1000" min="100">
+                    </div>
+                </div>
+            </div>
+            
+            <div id="numero">0</div>
+            
+            <div class="botones-accion">
+                <button onclick="iniciarTemporizador()" id="btnGenerar">Generar</button>
+                <button onclick="toggleHistorial()" id="btnHistorial">Mostrar historial</button>
+            </div>
+            
+            <div id="mensajeError" class="error"></div>
+            <div class="historial" id="historialContainer"></div>
+        </div>
+    </div>
+
+    <script src="temporizador.js">
+    </script>
+    
+</body>
+</html>
